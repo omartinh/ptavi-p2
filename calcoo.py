@@ -13,14 +13,18 @@ class Calculadora():
         
           
 if __name__ == "__main__":
-    
-    operando1 = int(sys.argv[1])
-    operando2 = int(sys.argv[3])
-    calculadora=Calculadora()
+    try:
+        operando1 = int(sys.argv[1])
+        operando2 = int(sys.argv[3])
+        calculadora=Calculadora()
+        
+    except ValueError:
+        sys.exit("Error: Non numerical parameters")
+        
     if  sys.argv[2] == "resta":
         resultado=calculadora.resta(operando1,operando2)
     elif sys.argv[2]=="suma":
-        resultado=calculadora.suma(operando1,operando2)
+        resultado=calculadora.suma(operando1,operando2)   
     print(resultado)
     
 
