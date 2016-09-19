@@ -25,7 +25,9 @@ if __name__ == "__main__":
     if  sys.argv[2] == "resta":
         resultado=calculadora.resta(operando1,operando2)
     elif sys.argv[2]=="suma":
-        resultado=calculadora.suma(operando1,operando2)   
+        resultado=calculadora.suma(operando1,operando2) 
+    else:
+        sys.exit('Operación sólo puede ser sumar o restar.')      
     print(resultado)
     
 
