@@ -16,28 +16,24 @@ for linea in lineas:
     nums=elem[3:]
     
     if operacion == "suma":
-        print("___esta es la suma___")
         result = calculadora.suma(num1,num2)
         for num in nums: 
            result = result + int(num)
         print(result)
         
     elif operacion == "resta":
-        print("___esta es la resta___")
         result = calculadora.resta(num1,num2)
         for num in nums:
             result = result - int(num)
         print(result)
         
     elif operacion == "multiplica":
-        print("___esta es la multiplicacion___")
         result = calculadora.mult(num1,num2)
         for num in nums:
             result = result * int(num)
         print(result)
         
-    elif operacion == "divide":
-        print("___esta es la division___")
+    elif operacion == "divide": 
         if num2!=0:
             result = calculadora.div(num1,num2)
             for num in nums:
