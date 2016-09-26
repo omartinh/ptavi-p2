@@ -24,27 +24,27 @@ with open(fich) as fichoperaciones:
         if operacion == "suma":
             result = calculadora.suma(num1, num2)
             for num in nums:
-                result = result + int(num)
+                result = calculadora.suma(result,int(num))
             print(result)
         elif operacion == "resta":
             if(num1 > num2):
                 result = calculadora.resta(num1, num2)
                 for num in nums:
-                    result = result - int(num)
+                    result = calculadora.resta(result,int(num))
                 print(result)
             else:
                 print("Error operandos resta")
         elif operacion == "multiplica":
             result = calculadora.mult(num1, num2)
             for num in nums:
-                result = result * int(num)
+                result = calculadora.mult(result,int(num))
             print(result)
         elif operacion == "divide":
             if num2 != 0:
                 result = calculadora.div(num1, num2)
                 for num in nums:
                     if int(num) != 0:
-                        result = result / int(num)
+                        result = calculadora.div(result,int(num))
                         print(result)
                     else:
                         print("Division by zero is not allowed")
