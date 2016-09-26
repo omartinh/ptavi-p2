@@ -30,7 +30,7 @@ if __name__ == "__main__":
         elif operacion == "resta":
             result = num1
             for num in nums:
-                if(num1 > int(num)):
+                if(result > int(num)):
                     result = calculadora.resta(result, int(num))
                 else:
                     result = 0  # cuando el primer valor es menor que el segundo dara 0
