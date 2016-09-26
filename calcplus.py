@@ -29,10 +29,13 @@ for linea in lineas:
         print(result)
         
     elif operacion == "resta":
-        result = calculadora.resta(num1,num2)
-        for num in nums:
-            result = result - int(num)
-        print(result)
+        if(num1>num2):
+            result = calculadora.resta(num1,num2)
+            for num in nums:
+                result = result - int(num)
+            print(result)
+        else:
+            print("Error operandos resta" )
         
     elif operacion == "multiplica":
         result = calculadora.mult(num1,num2)
