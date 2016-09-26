@@ -4,10 +4,17 @@
 import sys
 import calcoohija
 
-calculadora=calcoohija.CalculadoraHija() # problemas a la hora de operar
-fichero = open('fich_operaciones','r')
-lineas = fichero.readlines()
+fich=sys.argv[1]
+calculadora=calcoohija.CalculadoraHija() #problemas a la hora de operar
 
+try:
+    fichero = open(fich,'r')
+except:
+    sys.exit("Error: fich name not found")
+
+    
+lineas = fichero.readlines()   
+    
 for linea in lineas:
     elem = linea.split(',')
     operacion = elem[0]
